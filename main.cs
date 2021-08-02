@@ -5,59 +5,6 @@ using System.Linq;
 
 class MainClass {
   public static void Main (string[] args) {
-    
-    /*Console.WriteLine("Testing Address");
-    Address addr1 = new Address();
-    addr1.AddressLine1="1234 Main St";
-    addr1.AddressLine2="Apt 102";
-    addr1.City = "Cleveland";
-    addr1.State = "azzffdsfd";
-    addr1.Zipcode = "44143";
-
-    addr1.Display();*/
-
-    /*Console.WriteLine("Testing Person");
-    Person p1 = new Person();
-    p1.FirstName = "John";
-    p1.LastName = "Smith";
-    p1.PermanentAddress.AddressLine1 = "1234 Main St";
-    p1.PermanentAddress.City = "Cleveland";
-    p1.PermanentAddress.State = "OH";
-    p1.PermanentAddress.Zipcode = "44143";
-    p1.DateOfBirth = Convert.ToDateTime("07/13/1994");
-    p1.Intro();
-    p1.IsBirthday();  */  
-
-    /*Console.WriteLine("Testing Student 1");
-    Student s1 = new Student();
-    s1.FirstName = "Kara";
-    s1.LastName="Kaiser";
-    s1.DateOfBirth = Convert.ToDateTime("01/01/2020");
-    s1.PermanentAddress.AddressLine1 = "999 Mallard Dr";
-    s1.PermanentAddress.City = "Parma";
-    s1.PermanentAddress.State = "OH";
-    s1.PermanentAddress.Zipcode = "44143";
-    s1.GPA = 2.1;
-    s1.School = "Cleveland State University";
-    s1.Intro();
-    s1.IsBirthday();
-    s1.SetAcademicStanding();
-    Console.WriteLine(s1.AcademicStanding);
-
-
-    Console.WriteLine("Testing Student 2");
-    Student s2 = new Student("Andrew", "Peggman");    
-    s2.DateOfBirth = Convert.ToDateTime("01/01/1989");
-    s2.PermanentAddress.AddressLine1 = "999 Mallard Dr";
-    s2.PermanentAddress.City = "Parma";
-    s2.PermanentAddress.State = "OH";
-    s2.PermanentAddress.Zipcode = "44143";
-    s2.GPA = 2.75;
-    s2.School = "Ohio State University";
-    s2.Intro();
-    s2.IsBirthday();
-    s2.SetAcademicStanding();
-    Console.WriteLine(s2.AcademicStanding);*/
 
     Author a1 = new Author();
     a1.FirstName = "K";
@@ -101,5 +48,31 @@ class MainClass {
     a1.RemoveBook("978-3-16-148410-0");
     a1.DisplayBooks();
     
+    Patron p1 = new Patron("Tyson" , "Crandall", "1111");
+    p1.Title = "Harry Potter";
+    p1.AddToRentalCart(b1, DateTime.Parse("10/1/2019 12:00:00 AM"));
+    p1.Display();
+    p1.AddToRentalCart(b2, DateTime.Parse("10/2/2019 12:00:00 AM"));
+    p1.Display();
+    p1.AddToRentalCart(b3, DateTime.Parse("10/3/2019 12:00:00 AM"));
+    p1.Display();
+    p1.AddToRentalCart(b4, DateTime.Parse("10/4/2019 12:00:00 AM"));
+    p1.Display();
+    p1.AddToRentalCart(b5, DateTime.Parse("10/5/2019 12:00:00 AM"));
+    p1.Display();
+
+    Patron p2 = new Patron("Ryan" , "H", "1211");
+    p1.Display();
+
+    Patron p3 = new Patron("Ben" , "S", "1121");
+    p3.Display();
+
+    Patron p4 = new Patron("James" , "H", "1121");
+    p4.Display();
+
+    Patron p5 = new Patron("Jason" , "C", "1112");
+    p5.Display();
+
+    p1.RemoveFromRentalCart(b3);
   }
 }
